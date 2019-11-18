@@ -1,7 +1,7 @@
 // Require Modules
 var mysql = require('mysql');
 var Table = require('easy-table');
-
+var inquirer = require('inquirer');
 
 
 // Establish Connection to Server and Target 'bamazon' Database
@@ -38,4 +38,5 @@ function showInventory() {
         console.log(t.toString())
     })
 };
+
 
