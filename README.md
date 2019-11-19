@@ -5,6 +5,8 @@
 ## What is it?
 Bamazon is CLI oriented application that emulates transactions between client and server. 
 
+- - -
+
 1: The application displays a list of avaiable products from the inventory data 
 2: bamazon will then prompt the user to:
     * select an item id
