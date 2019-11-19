@@ -18,7 +18,7 @@ INSERT INTO products (product_name, department_name, price, stock_quantity) valu
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Lavashak (5pk)', 'Grocery', 12.99, 7);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Scotch Packing Tape w/Dispenser (5pk)', 'Office Supplies', 15.75, 200);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Cinco D-Pants', 'Hygiene', 19.89, 2);
-INSERT INTO products (product_name, department_name, price, stock_quantity) values ("Cinco's 'It's Not Jackie Chan'", 'Family Games', 19.54, 1);
+INSERT INTO products (product_name, department_name, price, stock_quantity) values ("Cinco's 'It's Not Jackie Chan' Game", 'Family Games', 19.54, 1);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Rice Cooker', 'Kitchen', 45.65, 27);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Pokemon Shield (Switch)', 'Video Games', 59.99, 43);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Pokemon Sword (Switch)', 'Video Games', 59.99, 27);

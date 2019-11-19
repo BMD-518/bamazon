@@ -31,7 +31,9 @@ function showInventory() {
         res.forEach(function (product){
             t.cell('Item ID', product.item_id);
             t.cell('Product Name', product.product_name);
+            t.cell('Department', product.department_name)
             t.cell('Price', product.price);
+            t.cell('Qty in Stock', product.stock_quantity);
             t.newRow();
         });
         // Console log table
@@ -76,7 +78,7 @@ function processOrder(iSelection, qSelection) {
             // Send query to database updating inventory.
             connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + qSelection + ' WHERE item_id = ' + iSelection);
         } else {
-            console.log('\nUnfortunately, we do not currently have enough ' + res[0].product_name + 'in stock to fulfill your order.')
+            console.log('\nUnfortunately, we do not currently have enough ' + res[0].product_name + '(s) in stock to fulfill your order.')
         };
         showInventory();
     })
