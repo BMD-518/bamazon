@@ -24,8 +24,8 @@ Bamazon is CLI oriented application that emulates transactions between client an
 - - -
 
 ## Technology utilized in app
-*JavaScript
-*Nodejs
-*SQL
-*Docker
+* JavaScript
+* Nodejs
+* SQL
+* Docker
 
