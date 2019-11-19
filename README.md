@@ -19,6 +19,8 @@ Bamazon is CLI oriented application that emulates transactions between client an
 
         ![Results](images/order-fail.png)
 
+- - -
+
 ## Technology utilized in app
 *JavaScript
 *Nodejs
