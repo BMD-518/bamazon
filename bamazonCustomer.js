@@ -35,7 +35,7 @@ function showInventory() {
             t.newRow();
         });
         // Console log table
-        console.log(t.toString());
+        console.log('\n' + t.toString());
         whatDoYouWant();
     });
 };
@@ -52,18 +52,35 @@ function whatDoYouWant() {
             {
                 type: 'input',
                 name: 'quantity',
-                message: 'How many would you like tp purchase?',
+                message: 'How many would you like to purchase?',
                 filter: Number
             },
 
         ]).then(function(answers){
-            var qAnswer = answers.quantity;
             var iAnswer = answers.item;
-
+            var qAnswer = answers.quantity;
+            processOrder(iAnswer, qAnswer);
             
         });
     }
 
+function processOrder(iSelection, qSelection) {
+    connection.query('SELECT * FROM products WHERE item_id = ' + iSelection, function(err, res){
+        if (err) throw err;
+        if (qSelection <= res[0].stock_quantity) {
+
+            // Notify customer that order is ready
+            var total = res[0].price * qSelection;
+            console.log('\nTHANK YOU! Your order has been placed!');
+            console.log('\nYour ' + res[0].product_name + ' will ship once payment of $' + total + ' is recieved');
+            // Send query to database updating inventory.
+            connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + qSelection + ' WHERE item_id = ' + iSelection);
+        } else {
+            console.log('\nUnfortunately, we do not currently have enough ' + res[0].product_name + 'in stock to fulfill your order.')
+        };
+        showInventory();
+    })
+}
     
     
     
