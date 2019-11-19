@@ -11,13 +11,13 @@ Bamazon is CLI oriented application that emulates transactions between client an
 2. bamazon will then prompt the user to:
     1. select an item id
     2. specify quantity
-3. The order is processed based on database inventory stock:
+3. The order is processed based on database inventory stock.
 
-    **In-Stock**: The image below shows a successful transaction.
+    **In-Stock** The image below shows a successful transaction:
 
         ![Image](./images/order-success.png)
 
-    **Out-of-Stock**: This image shows output when user selection is out of stock.
+    **Out-of-Stock** This image shows output when user selection is out of stock:
 
         ![Image](./images/order-fail.png)
 
