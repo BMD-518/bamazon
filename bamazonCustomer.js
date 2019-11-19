@@ -32,11 +32,38 @@ function showInventory() {
             t.cell('Item ID', product.item_id);
             t.cell('Product Name', product.product_name);
             t.cell('Price', product.price);
-            t.newRow()
-        })
+            t.newRow();
+        });
         // Console log table
-        console.log(t.toString())
-    })
+        console.log(t.toString());
+        whatDoYouWant();
+    });
 };
 
+function whatDoYouWant() {
+    
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'item',
+                message: 'Enter the item ID of desired product.',
+                filter: Number
+            },
+            {
+                type: 'input',
+                name: 'quantity',
+                message: 'How many would you like tp purchase?',
+                filter: Number
+            },
 
+        ]).then(function(answers){
+            var qAnswer = answers.quantity;
+            var iAnswer = answers.item;
+
+            
+        });
+    }
+
+    
+    
+    
