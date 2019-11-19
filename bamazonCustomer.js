@@ -48,7 +48,7 @@ function whatDoYouWant() {
             {
                 type: 'input',
                 name: 'item',
-                message: 'Enter the item ID of desired product.',
+                message: 'Enter the Item ID of desired product.',
                 filter: Number
             },
             {
@@ -73,13 +73,16 @@ function processOrder(iSelection, qSelection) {
 
             // Notify customer that order is ready
             var total = res[0].price * qSelection;
+            console.log('\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+');
             console.log('\nTHANK YOU! Your order has been placed!');
             console.log('\nYour ' + res[0].product_name + ' will ship once payment of $' + total.toFixed(2) + ' is recieved');
             // Send query to database updating inventory.
             connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + qSelection + ' WHERE item_id = ' + iSelection);
         } else {
+            console.log('\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+');
             console.log('\nUnfortunately, we do not currently have enough ' + res[0].product_name + '(s) in stock to fulfill your order.')
         };
+        console.log('\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+');
         showInventory();
     })
 }
