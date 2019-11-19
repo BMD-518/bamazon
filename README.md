@@ -7,11 +7,11 @@ Bamazon is CLI oriented application that emulates transactions between client an
 
 - - -
 
-1: The application displays a list of avaiable products from the inventory data 
-2: bamazon will then prompt the user to:
-    * select an item id
-    * specify quantity
-3: The order is processed based on database inventory stock:
+1. The application displays a list of avaiable products from the inventory data
+2. bamazon will then prompt the user to:
+    1. select an item id
+    2. specify quantity
+3. The order is processed based on database inventory stock:
 
     **In-Stock**: The image below shows a successful transaction.
 
